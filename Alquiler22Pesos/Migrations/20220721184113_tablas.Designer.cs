@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Alquiler22Pesos.Migrations
 {
     [DbContext(typeof(dbcontext))]
-    [Migration("20220712192440_Tablass")]
-    partial class Tablass
+    [Migration("20220721184113_tablas")]
+    partial class tablas
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -204,8 +204,8 @@ namespace Alquiler22Pesos.Migrations
 
                     b.Property<string>("FotoProducto")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("NombreProducto")
                         .IsRequired()
@@ -218,7 +218,7 @@ namespace Alquiler22Pesos.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Prpducto");
+                    b.ToTable("Producto");
                 });
 #pragma warning restore 612, 618
         }

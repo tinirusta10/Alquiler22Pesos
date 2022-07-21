@@ -32,7 +32,7 @@ public class Producto
 
 
         [Required]
-       [MaxLength(10, ErrorMessage = "No se pueden subir mas de 10 fotos")]
+       [MaxLength(200)]
         public string FotoProducto { get; set; }
 
 
