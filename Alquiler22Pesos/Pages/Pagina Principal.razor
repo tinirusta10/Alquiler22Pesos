@@ -1,0 +1,211 @@
+﻿@page "/"
+
+<html>
+
+    <head>
+
+         <title>Pagina principal</title>
+         
+
+    </head>
+
+    <body>
+
+
+                <navbar style="margin: -20px;align-items: center;background: RGB(254, 189, 89);display: flex;justify-content: space-between;"><a style="
+    font-size: 6rem;
+">=</a>
+<p style="
+    font-size: 2rem;
+    width: 15rem;
+"> <b>¡Alquiler por 2 pesos! </b></p>
+<form style="width: 29rem;"><input type="search" placeholder="buscar alquiler" style="
+    width: 90%;
+    border-radius: 11px;
+    height: 2rem;
+    font-weight: 600;
+    text-align: center;
+"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" style="width: 2rem;"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path></svg></form> 
+
+<form style="
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    margin-top: 12px;
+"><input id="emaildelogin" type="search" placeholder="Email" style="
+    font-weight: 600;
+">
+<input type="password" placeholder="Contraseña" style="
+    font-weight: 600;
+"></form></navbar>
+
+@*Css*@
+    <style>
+
+        .precio{
+        position: fixed;
+        left: 1080px;
+        top : 100px;
+        font-size: 17px;       
+        }
+
+        .ubicacion {       
+        position: fixed;
+        left: 1250px;
+        top : 100px;
+        font-size: 17px;                
+        }
+
+        .categoria {       
+        position: fixed;
+        left: 850px;
+        top : 100px;
+        font-size: 17px;              
+        }
+
+        .buscados{       
+        position: fixed;  
+        top: 250px;
+        left: 350px;
+        }
+
+        .alquilados{
+        position: fixed;  
+        top: 600px;
+        left: 350px;
+        }
+
+        .imagen1{
+            position:fixed;
+            left: 300px;
+            top: 280px;
+            height: 200px;
+            width: 250px;          
+        }
+
+        .imagen2{
+            position:fixed;
+            left: 500px;
+            top: 280px;
+            height: 200px;
+            width: 250px;          
+        }
+        
+        .imagen3{
+            position:fixed;
+            left: 700px;
+            top: 280px;
+            height: 200px;
+            width: 250px;          
+        }
+
+        .imagen4{
+            position:fixed;
+            left: 1000px;
+            top: 280px;
+            height: 200px;
+            width: 250px;          
+        }
+
+        .imagen5{
+            position:fixed;
+            left: 300px;
+            top: 700px;
+            height: 200px;
+            width: 250px;          
+        }
+
+        .imagen6{
+            position:fixed;
+            left: 600px;
+            top: 700px;
+            height: 200px;
+            width: 250px; 
+        }
+
+        .imagen7{
+            position:fixed;
+            left: 900px;
+            top: 700px;
+            height: 180px;
+            width: 250px; 
+        }
+
+    </style>
+
+    <div class="precio">
+    
+        <p> Precio</p>
+
+
+
+
+    </div>
+
+    <div class= "ubicacion">
+
+        <p> Ubicacion</p>
+
+    </div>
+
+    <div class= "categoria">
+
+        <p> Categoria / Rubro</p>
+
+    </div>
+
+    <div class=" buscados">
+
+        <p> <b>Productos mas buscados</b></p>
+
+
+    </div>
+
+    <div class=" alquilados">
+
+       <p><b>Productos mas alquilados</b></p>
+
+
+    </div>
+    
+    <div class="imagen">
+    <img class="imagen1" src="https://farmacityar.vteximg.com.br/arquivos/ids/215748-600-600/224617_edp-cher-dieciocho-x-100-ml_imagen-2.jpg?v=637690357333730000" />
+    </div>
+
+
+    <div class="imagen">
+    <img class="imagen2" src="https://d3ugyf2ht6aenh.cloudfront.net/stores/157/089/products/f56ec9a0-bc1c-494d-bd4c-f14e9384c6d51-b59d6e588ec0a3087016297369180471-1024-1024.jpg" />
+    </div>
+
+    <div class="imagen">
+    <img class="imagen3" src="https://arcencohogar.vtexassets.com/arquivos/ids/296136-500-auto?v=637665756194070000&width=500&height=auto&aspect=true" />
+    </div>
+
+    <div class="imagen">
+    <img class="imagen4" src="https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_3b324cb695a947bbbe967883917456dc.jpg" />
+    </div>
+
+    <div class="imagen">
+    <img class="imagen5" src="https://coppelar.vtexassets.com/arquivos/ids/1565409/198_60f21f17eed0b.jpg?v=637631637228870000" />
+    </div>
+
+    <div class="imagen">
+    <img class="imagen6" src="https://pintureriasagitario.com.ar/wp-content/uploads/2020/08/CSL1500.jpg" />
+    </div>
+
+    <div class="imagen">
+    <img class="imagen7" src="https://autorentbariloche.com.ar/wp-content/uploads/chevrolet_onix.png" />
+    </div>
+</body>
+
+    
+
+
+
+
+</html>
+
+@code {
+
+}
