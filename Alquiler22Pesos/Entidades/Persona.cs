@@ -10,6 +10,7 @@ namespace Alquiler22Pesos.Entidades
     {
         [Required]
 
+        //es la id de la persona//
 
         public int Id { get; set; }
 
