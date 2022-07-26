@@ -43,30 +43,66 @@
 @*Css*@
     <style>
 
+        
         .precio{
         position: fixed;
         left: 1080px;
         top : 100px;
-        font-size: 17px;       
+        font-size: 17px;     
+
         }
 
+        .precio a {
+       
+        color: black;
+        text-decoration: none;
+            
+        }
+
+        .precio a:hover{
+
+            color:grey;
+
+        }
+        
         .ubicacion {       
         position: fixed;
         left: 1250px;
         top : 100px;
         font-size: 17px;                
         }
+        .ubicacion a {
+       
+        color: black;
+        text-decoration: none;
+            
+        }
 
+        .ubicacion a:hover{
+
+            color:grey;
+
+        }
         .categoria {       
         position: fixed;
         left: 850px;
         top : 100px;
         font-size: 17px;              
         }
+        .categoria a {
+       
+        color: black;
+        text-decoration: none;
+            
+        }
 
+        .categoria a:hover{
+
+            color:grey;
+        }
         .buscados{       
         position: fixed;  
-        top: 250px;
+        top: 220px;
         left: 350px;
         }
 
@@ -76,82 +112,108 @@
         left: 350px;
         }
 
-        .imagen1{
+        .imagen1 {
             position:fixed;
             left: 300px;
             top: 280px;
             height: 200px;
-            width: 250px;          
+            width: 250px;   
+            transition: 1s;
+           
         }
+        .imagen1:hover {
 
+           transform: scale(1.3)       
+        }
         .imagen2{
             position:fixed;
             left: 500px;
             top: 280px;
             height: 200px;
-            width: 250px;          
+            width: 250px;    
+            transition: 1s;
         }
-        
+        .imagen2:hover {
+
+           transform: scale(1.3)       
+        }       
         .imagen3{
             position:fixed;
             left: 700px;
             top: 280px;
             height: 200px;
-            width: 250px;          
+            width: 250px;   
+            transition: 1s;
+            
         }
+        .imagen3:hover {
 
+           transform: scale(1.3)       
+        }     
         .imagen4{
             position:fixed;
             left: 1000px;
             top: 280px;
             height: 200px;
-            width: 250px;          
+            width: 250px;  
+            transition: 1s;
         }
+        .imagen4:hover {
 
+           transform: scale(1.3)       
+        }     
         .imagen5{
             position:fixed;
             left: 300px;
             top: 700px;
             height: 200px;
-            width: 250px;          
+            width: 250px;   
+            transition: 1s;
         }
+        .imagen5:hover {
 
+           transform: scale(1.3)       
+        }     
         .imagen6{
             position:fixed;
             left: 600px;
             top: 700px;
             height: 200px;
             width: 250px; 
+            transition: 1s;
         }
+        .imagen6:hover {
 
+           transform: scale(1.3)       
+        }     
         .imagen7{
             position:fixed;
             left: 900px;
             top: 700px;
             height: 180px;
             width: 250px; 
+            transition: 1s;
         }
+        .imagen7:hover {
 
+           transform: scale(1.3)       
+        }     
     </style>
 
     <div class="precio">
-    
-        <p> Precio</p>
-
-
-
+    <a href="">Precio</a>
 
     </div>
 
     <div class= "ubicacion">
 
-        <p> Ubicacion</p>
+       <a href="/"><p> Ubicacion</p></a>
 
     </div>
 
     <div class= "categoria">
 
-        <p> Categoria / Rubro</p>
+       <a href="/"> <p> Categoria / Rubro</p></a>
 
     </div>
 
@@ -175,7 +237,8 @@
 
 
     <div class="imagen">
-    <img class="imagen2" src="https://d3ugyf2ht6aenh.cloudfront.net/stores/157/089/products/f56ec9a0-bc1c-494d-bd4c-f14e9384c6d51-b59d6e588ec0a3087016297369180471-1024-1024.jpg" />
+               
+        <img class="imagen2" src="https://d3ugyf2ht6aenh.cloudfront.net/stores/157/089/products/f56ec9a0-bc1c-494d-bd4c-f14e9384c6d51-b59d6e588ec0a3087016297369180471-1024-1024.jpg" />
     </div>
 
     <div class="imagen">
@@ -195,15 +258,13 @@
     </div>
 
     <div class="imagen">
-    <img class="imagen7" src="https://autorentbariloche.com.ar/wp-content/uploads/chevrolet_onix.png" />
+           
+        <img class="imagen7" src="https://autorentbariloche.com.ar/wp-content/uploads/chevrolet_onix.png" />     
+    
     </div>
 </body>
 
     
-
-
-
-
 </html>
 
 @code {
