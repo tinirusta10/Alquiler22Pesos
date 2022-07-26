@@ -1,0 +1,25 @@
+﻿*{
+
+    box-sizing:border-box;
+
+}
+
+h1  { font-size: 3em;}
+h2 {
+    font-size: 2.3em;
+}
+h3 {
+    font-size: 1.75rem;
+}
+
+ul {list-style: none}
+
+body {
+    background-color: white;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+button {
+    font-size: 1.1em;
+    font-weight: bold;
+}
