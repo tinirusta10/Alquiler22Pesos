@@ -11,42 +11,80 @@
 
     <body>
 <header>
-<section id="Pagina">
-                <navbar style="margin: -20px;align-items: center;background: RGB(254, 189, 89);display: flex;justify-content: space-between;"><a style="
-    font-size: 6rem;
-">=</a>
-<p style="
-    font-size: 2rem;
-    width: 15rem;
-"> <b>¡Alquiler por 2 pesos! </b></p>
-<form style="width: 29rem;"><input type="search" placeholder="buscar alquiler" style="
-    width: 90%;
-    border-radius: 11px;
-    height: 2rem;
-    font-weight: 600;
-    text-align: center;
-"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" style="width: 2rem;"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path></svg></form> 
 
-<form style="
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    margin-top: 12px;
-"><input id="emaildelogin" type="search" placeholder="Email" style="
-    font-weight: 600;
-">
-<input type="password" placeholder="Contraseña" style="
-    font-weight: 600;
-"></form></navbar>
+                
 
-</section>
 
 @*Css*@
     <style>
 
+        html{
         
-        .precio{
+            box-sizing: border-box;
+        
+        }
+        
+        #barra navbar{
+        
+            margin: -20px;
+            align-items: center;
+            background: RGB(254, 189, 89);
+            display: flex;
+            justify-content: space-between;
+            
+
+            
+        
+        }
+
+        #barra .buscador form{
+        
+            width: 29rem;
+        
+        }
+
+        #barra .buscador input{
+        
+            width: 90%;    
+            border-radius: 11px;    
+            height: 2rem;    
+            font-weight: 600;   
+            text-align: center;"
+        
+        }
+        #barra p{
+        
+            font-size: 2rem;    
+            width: 15rem
+        
+        }
+
+        #barra a{
+        
+            font-size: 6rem;
+
+        
+        }
+        #datos  {
+        
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        margin-top: 12px;
+        
+        }
+
+        #datos input{
+
+
+        font-weight: 600;
+        
+        }
+
+
+
+         .precio{
         position: fixed;
         left: 1080px;
         top : 100px;
@@ -67,6 +105,16 @@
 
         }
         
+         #links:first-child{
+        position: fixed;
+        left: 1080px;
+        top : 100px;
+        font-size: 17px;           
+
+         
+         
+         }
+         
         .ubicacion {       
         position: fixed;
         left: 1250px;
@@ -206,7 +254,40 @@
         }     
     </style>
 
-    <section id="links">
+
+<section id="barra">
+    <navbar>
+                    
+    <a>=</a>
+<p><b>¡Alquiler por 2 pesos! </b></p>
+
+<div class="buscador"> 
+<form >
+
+    <input type="search" placeholder="buscar alquiler">
+ 
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" style="width: 2rem;"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+  </svg>
+</form> 
+</div>
+
+
+<section id="datos">
+
+    
+<input id="emaildelogin" type="search" placeholder="Email">
+<input type="password" placeholder="Contraseña" >
+
+</section>
+
+</navbar>
+
+
+
+</section>
+
+
+ <section id="links">
 
     <div class="precio">
     <a href="">Precio</a>
@@ -225,9 +306,9 @@
 
     </div>
     
-    </section>
+</section>
     
-    <section id="lista">
+ <section id="lista">
 
     <div class=" buscados">
 
@@ -243,9 +324,9 @@
 
     </div>
     
-    </section>
+ </section>
 
-    <section id="imagenes">
+ <section id="imagenes">
 
     <div class="imagen">
     <img class="imagen1" src="https://farmacityar.vteximg.com.br/arquivos/ids/215748-600-600/224617_edp-cher-dieciocho-x-100-ml_imagen-2.jpg?v=637690357333730000" />
@@ -278,7 +359,7 @@
         <img class="imagen7" src="https://autorentbariloche.com.ar/wp-content/uploads/chevrolet_onix.png" />     
     
     </div>
-    </section>
+</section>
 
     </header>
 
