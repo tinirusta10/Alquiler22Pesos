@@ -33,7 +33,6 @@ namespace Alquiler22Pesos.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
         {
-            p
             try
             {
                 return RedirectToAction(nameof(Index));
