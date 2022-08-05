@@ -1,7 +1,7 @@
 ﻿
 
 using Alquiler22Pesos.Entidades;
-using Alquiler2Pesoss.Entidades;
+using Alquiler22Pesos.Pages;
 using Microsoft.EntityFrameworkCore;
 
 namespace Alquiler22Pesos.Data

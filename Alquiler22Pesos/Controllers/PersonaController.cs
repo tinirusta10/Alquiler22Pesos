@@ -1,13 +1,18 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Alquiler22Pesos.Data;
+using Alquiler22Pesos.Entidades;
+using Alquiler22Pesos.Pages;
 
 namespace Alquiler22Pesos.Controllers
 {
     public class PersonaController : Controller
     {
+        
         // GET: PersonaController
         public ActionResult Index()
         {
+            Producto prod = new Producto();
             return View();
         }
 
@@ -28,6 +33,7 @@ namespace Alquiler22Pesos.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
         {
+            p
             try
             {
                 return RedirectToAction(nameof(Index));
