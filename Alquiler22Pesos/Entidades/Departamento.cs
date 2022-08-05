@@ -1,6 +1,7 @@
-﻿
+﻿using Alquiler22Pesos.Data;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+
 
 namespace Alquiler22Pesos.Entidades
 {
