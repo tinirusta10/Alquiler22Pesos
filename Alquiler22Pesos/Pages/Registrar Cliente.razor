@@ -1,36 +1,219 @@
-﻿<head>
+﻿<html>
+<head>
     <title>Registrar Usuario</title>
     @page "/holaa"
+    
+    
     <link rel=" icon" href="~/css/" />
+    <style>
+        body {
+    
+    font-family: Helvetica;
+
+
+    margin: 0;
+}
+       header{display: flex;
+    position: fixed;
+    top: -3px;
+    left: 0px;
+    width: 5000px;
+    background-color: RGB(254, 189, 89);
+    height: 120px;
+    padding: 0;}
+   
+    #banner h1{
+
+    position: fixed;
+    top: 24px;
+    left: 250px;
+    font-size: 50px;
+    font-family: Helvetica;
+    text-shadow: 5px 1.5px 10px  #494949 ;
+    
+    }
+    .nav-link{color:black}
+
+
+    .nav-link:hover{color:#868686}
+
+    .lupa{  
+
+    position: fixed;
+    left: 1320px;
+    top: 24px;
+    font-size: 23px;
+    color: black;
+}
+.caja-buscador{   
+    position: fixed;
+    border-radius: 30px;
+    background-color: rgb(248, 248, 248);
+    top: 21px;
+    left: 842px;
+    height: 40px;
+    width: 450px;
+    }
+
+    header .toggle-btn  {
+
+    position: absolute;
+    
+    font-size: 4rem;
+    cursor: pointer;
+
+
+}
+#btn-menu   {
+
+    display: none;
+
+}
+
+
+
+.cont-menu  {
+
+    width: 100%;
+    max-width: 250px;
+    background: rgb(36, 34, 34);
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    visibility: hidden;
+    transform: translateX(-100%);
+    
+
+
+}
+#btn-menu:checked ~ .cont-menu  {
+    visibility: visible;
+    transform: translateX(0%);
+    position: fixed;
+}
+
+
+.cont-menu nav  {
+
+
+    transform: translateY(15%);
+
+
+}
+
+.cont-menu nav a {
+
+    display: block;
+    text-decoration: none;
+    padding: 30px;
+    border-left: 5px solid transparent;
+    transition: all 40ms ease;
+    color: white;
+    transition: all 2000ms transparent;
+}
+
+.cont-menu nav a:hover  {
+
+    border-left: 5px solid #c7c7c7;
+    background: #292929;
+}
+
+
+.cont-menu label    {
+
+
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    color:#c7c7c7;
+    font-size: 35px;
+    cursor: pointer;
+    
+
+}
+#textos h1{
+       position: absolute;
+    font-size: 36px;
+    top: 113%;
+    left: 17%;
+    font-family: Helvetica;
+
+}
+#banner nav{
+       display: flex;
+    position: fixed;
+    left: 900px;
+    top: 70px;
+    text-decoration: none;
+}
+.buscador{
+    position: fixed;
+    left: 847px;
+    top: 21px;
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    line-height: 40px;
+    padding: 0px 20px;
+    color: rgb(2, 2, 2);
+
+}
+    </style>
 </head>
 <body>
-    <navbar style="margin: 0px;align-items: center;background: RGB(254, 189, 89);display: flex;justify-content: space-between;"><a style="
-    font-size: 6rem;
-">=</a><p style="
-    font-size: 2rem;
-    width: 8rem;
-">alquiler a 2 pesos</p>
-<form style="width: 29rem;"><input type="search" placeholder="buscar alquiler" style="
-    width: 90%;
-    border-radius: 11px;
-    height: 2rem;
-    font-weight: 600;
-    text-align: center;
-"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" style="width: 2rem;"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path></svg></form> 
+    <header>
 
-<form style="
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    margin-top: 12px;
-"><input id="emaildelogin" type="search" placeholder="Email" style="
-    font-weight: 600;
-">
-<input type="password" placeholder="Contraseña" style="
-    font-weight: 600;
-"></form></navbar>
-</body>
+     <label for="btn-menu" class=icon-menu>
+        <div class="toggle-btn">
+
+            <span>&#9776</span>
+
+        </div>
+        </label>
+
+        <input type="checkbox" id="btn-menu">
+        <div class="cont-menu">
+            <nav>
+            <a href="#">Mis productos</a>
+            <a href="#">Historial</a>
+            <a href="">Perfil</a>
+            </nav>
+            <label for="btn-menu" class=icon-menu>
+                <div class="salir"> 
+                <span>&#x21d0;</span>
+                </div>
+                </label>
+                </div>
+          <section id = "banner">
+            <div class="palabra" >
+                <h1>¡Alquiler por 2 pesos!</h1>
+            </div>
+            <nav>
+                <a href="" class="nav-link">Categoria/Rubro</a>
+                <a href="" class="nav-link">Precio</a>
+                <a href="" class="nav-link">Ubicacion</a>
+            </nav>
+            
+            <div class="lupa">
+            <span>&#127859</span>
+            </div>
+            <div class="caja-buscador">
+            </div>
+            </section>
+            <section id="textos">
+
+            <div>
+                <h1>Registrar cliente</h1>
+            </div>
+
+            
+
+            
+            </section>
+            <input class="buscador" type="text" name="" placeholder="Buscar producto">
+
+           
 <div style="
 display:flex">
     </div>
@@ -42,47 +225,10 @@ display:flex">
 
 
 
-<div style="display: block;"><h2 style="text-align: center;font-size: 37px;">Registro De Usuario</h2><br><br>
-
-<br>
-<label style="width: 5rem;">Nombre</label>
-<input type="text" style="
-    width: 21rem;
-">
-<br>
-<br><label style="
-    width: 5rem;
-">Apellido</label><input type="text" style="
-    width: 342px;
-"><br>
-<br><br><label style="
-    width: 9rem;
-">Tipo de Documento</label>
-<input type="text" style="
-    width: 17rem;
-">
-
-<br><br><label style="
-    width: 9rem;
-">N° Documento</label><input type="text" style="
-    width: 279px;
-"><br>
-<br>
-<br>
-<br>
-<labe>Medios de Contacto</labe><br>
-<br>
-<br>
-<br>
-<labe style="">Telefono</labe><input type="text" style="
-    width: 361px;
-"><br><br><labe style="
-">Email</labe>
+ 
 
 
-<input type="text" style="
-    width: 377px;
-">
+
 <label style="position: fixed;top: 303px;left: 612px;">Ingrese una contraseña</label><input type="text" style="position: fixed;top: 299px;left: 816px;">
 <label style="
     position: fixed;
@@ -222,6 +368,10 @@ display:flex">
     left: 1160px;
 ">Adjuntar</button>
 </div>
+</header>
+</body>
+</html>
+
 
 
 
