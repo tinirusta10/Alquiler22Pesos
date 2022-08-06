@@ -8,9 +8,8 @@
 
 
 
-@*<input type="file" id="nav-header-mobile-avatar-upload" name="file" accept="image/jpeg,.jpg,image/gif,.gif,image/png,.png,.jpeg,image/webp,.webp">*@
    
-   @*<EditForm Model="@producto">*@
+   <EditForm Model="@producto">
 
  <html>
 
@@ -20,7 +19,7 @@
 
 <body>
 
-
+    
 <navbar
         style="margin: -20px;align-items: center;background: RGB(254, 189, 89);display: flex;justify-content: space-between;">
         
@@ -90,7 +89,7 @@
             
      <input type="text" style=" width: 26rem;"><br><br>
 
-
+     @*<input type="text" @bind="producto.PrecioProducto" />*@
       <label for="fname" style=" width: 10rem;">Precio del producto</label>
             <input type="text" style="
     width: 26rem;
@@ -155,19 +154,22 @@
 
 
         <input type="file" id="getFile" name="file" hidden="" accept="">
+        
     </div>
 </body>
 
 </html>
+
+</EditForm>
 
         
 
    
 
 
-@*</EditForm>*@
+
 
 @code{
-    Producto prod = new Producto();
-
+    Producto producto = new Producto();
+    
 }
