@@ -188,7 +188,7 @@ namespace Alquiler22Pesos.Migrations
                     b.ToTable("TipoDocumento");
                 });
 
-            modelBuilder.Entity("Alquiler2Pesoss.Entidades.Producto", b =>
+            modelBuilder.Entity("Alquiler22Pesos.Entidades.Producto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Alquiler22Pesos.Data;
 using Alquiler22Pesos.Entidades;
-using Alquiler22Pesos.Pages;
+
 
 namespace Alquiler22Pesos.Controllers
 {

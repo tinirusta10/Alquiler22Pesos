@@ -2,6 +2,7 @@
 <head>
     <title>Registrar Usuario</title>
     @page "/holaa"
+@using Alquiler22Pesos.Entidades
     
     
     <link rel=" icon" href="~/css/" />
@@ -355,7 +356,7 @@ display:flex">
     position: fixed;
     top: 299px;
     left: 1173px;
-">Foto de perfil</label><button onclick="document.getElementById('getFile').click()" style="
+">Foto de perfil</label><button @ onclick="document.getElementById('getFile').click()" style="
     margin-left: 1rem;
     background: RGB(254, 189, 89);
     background-image: -webkit-linear-gradient(top, RGB(254, 189, 89), RGB(254, 189, 89));
@@ -376,6 +377,9 @@ display:flex">
     left: 1160px;
 ">Adjuntar</button>
 
+            
+
+
 </header>
 </body>
 </html>
@@ -386,5 +390,6 @@ display:flex">
 
 
 @code {
+    Persona per = new Persona();
 
 }
