@@ -1,14 +1,7 @@
-﻿@using Alquiler22Pesos.Data
-@page "/clientes"
-@inject IPersonService PersonService
-
-<EditForm Model = "@persona">
-
-<html>
+﻿<html>
 <head>
     <title>Registrar Usuario</title>
-    
-
+    @page "/holaa"
     
     
     <link rel=" icon" href="~/css/" />
@@ -62,7 +55,7 @@
     width: 450px;
     }
 
-    header .toggle-btn span  {
+    header .toggle-btn  {
 
     position: absolute;
     
@@ -166,44 +159,32 @@
     color: rgb(2, 2, 2);
 
 }
-
-#banner nav:hover   {
-
-        color: dimgrey;
-
-}
-
-
     </style>
 </head>
 <body>
     <header>
 
+     <label for="btn-menu" class=icon-menu>
         <div class="toggle-btn">
-            <label for="btn-menu" class=icon-menu>
-        
 
-                <span>&#9776</span>
+            <span>&#9776</span>
 
-        
-            </label>
         </div>
+        </label>
 
         <input type="checkbox" id="btn-menu">
         <div class="cont-menu">
             <nav>
-             <a href="/">Pagina principal</a>
-             <a href="/producto">Registrar productos</a>
-             <a href="/misProductos">Mis productos</a>
+            <a href="#">Mis productos</a>
+            <a href="#">Historial</a>
+            <a href="">Perfil</a>
             </nav>
-            <div class="salir"> 
             <label for="btn-menu" class=icon-menu>
-                
+                <div class="salir"> 
                 <span>&#x21d0;</span>
-                
+                </div>
                 </label>
-             </div>
-         </div>
+                </div>
           <section id = "banner">
             <div class="palabra" >
                 <h1>¡Alquiler por 2 pesos!</h1>
@@ -366,7 +347,7 @@ display:flex">
     position: fixed;
     top: 299px;
     left: 1173px;
-">Foto de perfil</label><button @ onclick="document.getElementById('getFile').click()" style="
+">Foto de perfil</label><button onclick="document.getElementById('getFile').click()" style="
     margin-left: 1rem;
     background: RGB(254, 189, 89);
     background-image: -webkit-linear-gradient(top, RGB(254, 189, 89), RGB(254, 189, 89));
@@ -385,38 +366,17 @@ display:flex">
     position: fixed;
     top: 348px;
     left: 1160px;
-"><input type="file" id="file">Adjuntar</button>
-
-                       <label style=""></label><input type="submit" style="
-          background-color: rgb(84, 84, 245);
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    padding: 10px;
-    border-color: rgb(131, 129, 129);
-    border: 2px solid rgb(131, 129, 129);
-    cursor: pointer;
-     position: fixed;
-    top: 650px;
-    left: 1700px;
-    color: white;">
-
-
+">Adjuntar</button>
 
 </header>
 </body>
 </html>
 
-</EditForm>
+
+
+
+
 
 @code {
-    Persona persona = new Persona();
-
-    
-    //Metodo para el Save
-    protected async Task SavePerson()
-    {
-        await PersonService.SavePerson(persona);
-    }
 
 }
