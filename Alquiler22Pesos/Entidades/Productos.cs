@@ -1,14 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-
 namespace Alquiler22Pesos.Entidades
 {
-
-
-
-
-    public class Producto
+    public class Productos
     {
+
         [Required]
         [MaxLength(10)]
         public int Id { get; set; }
@@ -33,16 +29,5 @@ namespace Alquiler22Pesos.Entidades
         [MaxLength(200)]
         public string FotoProducto { get; set; }
 
-
-
-
-
-
-
-
     }
-
-
-
-
 }
