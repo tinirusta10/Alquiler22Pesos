@@ -13,7 +13,7 @@
     <body>
 
         
-<header>
+
 
                 
 
@@ -27,134 +27,171 @@
         
         }
         
-        #barra navbar{
-        
-            margin: -20px;
-            align-items: center;
-            background: RGB(254, 189, 89);
-            display: flex;
-            justify-content: space-between;
-            
-
-            
-        
-        }
-
-        #barra .buscador form{
-        
-            width: 30rem;
-        
-        }
-
-        #barra .buscador input{
-        
-            width: 90%;    
-            border-radius: 11px;    
-            height: 2rem;    
-            font-weight: 600;   
-            text-align: center;
-
-        
-        }
-        #barra p{
-        
-            font-size: 2rem;    
-            width: 30rem
-        
-        }
-
-        #barra a{
-          
-
-            font-size: 6rem;
-
-        
-        }
-        #datos  {
-        
-        display: grid;
-        align-items: center;
-        justify-items: center;
-        align-content: center;
-        margin-top: 12px;
-          text-align: center;
-        
-        }
-
-        #datos input{
+                body {
+    
+    font-family: Helvetica;
 
 
-        font-weight: 600;
-        
-        }
+    margin: 0;
+}
+       header{display: flex;
+    position: fixed;
+    top: -3px;
+    left: 0px;
+    width: 5000px;
+    background-color: RGB(254, 189, 89);
+    height: 120px;
+    padding: 0;}
+   
+    #banner h1{
+
+    position: fixed;
+    top: 24px;
+    left: 250px;
+    font-size: 50px;
+    font-family: Helvetica;
+    text-shadow: 5px 1.5px 10px  #494949 ;
+    
+    }
+    .nav-link{color:black}
+
+
+    .nav-link:hover{color:#868686}
+
+    .lupa{  
+
+    position: fixed;
+    left: 1320px;
+    top: 24px;
+    font-size: 23px;
+    color: black;
+}
+.caja-buscador{   
+    position: fixed;
+    border-radius: 30px;
+    background-color: rgb(248, 248, 248);
+    top: 21px;
+    left: 842px;
+    height: 40px;
+    width: 450px;
+    }
+
+    header .toggle-btn span {
+
+    position: absolute;
+    
+    font-size: 4rem;
+    cursor: pointer;
+
+
+}
+#btn-menu   {
+
+    display: none;
+
+}
 
 
 
-         .precio{
-        position: fixed;
-        left: 500px;
-        top : 110px;
-        font-size: 17px;     
+.cont-menu  {
 
-        }
+    width: 100%;
+    max-width: 250px;
+    background: rgb(36, 34, 34);
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    visibility: hidden;
+    transform: translateX(-100%);
+    
 
-        .precio a {
-       
-        color: black;
-        text-decoration: none;
-            
-        }
 
-        .precio a:hover{
+}
+#btn-menu:checked ~ .cont-menu  {
+    visibility: visible;
+    transform: translateX(0%);
+    position: fixed;
+}
 
-            color:grey;
 
-        }
+.cont-menu nav  {
 
-        body .links {
-        
-            position:fixed;
-            left:50px;
-        
-        
-        }
-        
+
+    transform: translateY(15%);
+
+
+}
+
+.cont-menu nav a {
+
+    display: block;
+    text-decoration: none;
+    padding: 30px;
+    border-left: 5px solid transparent;
+    transition: all 40ms ease;
+    color: white;
+    transition: all 2000ms transparent;
+}
+
+.cont-menu nav a:hover  {
+
+    border-left: 5px solid #c7c7c7;
+    background: #292929;
+}
+
+
+.cont-menu label    {
+
+
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    color:#c7c7c7;
+    font-size: 35px;
+    cursor: pointer;
+    
+
+}
+#textos h1{
+       position: absolute;
+    font-size: 36px;
+    top: 113%;
+    left: 17%;
+    font-family: Helvetica;
+
+}
+#banner nav{
+       display: flex;
+    position: fixed;
+    left: 900px;
+    top: 70px;
+    text-decoration: none;
+}
+.buscador{
+    position: fixed;
+    left: 847px;
+    top: 21px;
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    line-height: 40px;
+    padding: 0px 20px;
+    color: rgb(2, 2, 2);
+
+}
+
+#banner nav:hover   {
+
+        color: dimgrey;
+
+}
+
+
+
          
-        .ubicacion {       
-        position: fixed;
-        left: 950px;
-        top : 110px;
-        font-size: 17px;                
-        }
-        .ubicacion a {
-       
-        color: black;
-        text-decoration: none;
-            
-        }
 
-        .ubicacion a:hover{
 
-            color:grey;
-
-        }
-        .categoria {       
-        position: fixed;
-        left: 700px;
-        top : 110px;
-        font-size: 17px;              
-        }
-        .categoria a {
-       
-        color: black;
-        text-decoration: none;
-            
-        }
-
-        .categoria a:hover{
-
-            color:grey;
-        }
         .buscados{       
         position: fixed;  
         top: 220px;
@@ -279,74 +316,62 @@
 
            
 
-<section id="barra">
-    
 
     
-    <navbar>
 
-
-     <br/> 
-
-<p><b>¡Alquiler por 2 pesos! </b> </p>
-
-  
-
-<div class="buscador"> 
-<form >
-
-    <input type="search" placeholder="buscar alquiler">
- 
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" style="width: 2rem;"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-  </svg>
-</form> 
-</div>
-
-
-
-<section id="datos">
-
-     <center>
-         <b>¡iniciar sesion! </b>
-         <p></p>
-<input id="emaildelogin" type="search" placeholder="Email">
-
-<p></p>
-<input type="password" placeholder="Contraseña" >
-
- </center>
-<br> 
-</section>
-<br>
-
-</navbar>
-
-
-
-</section>
-
-<div class="container">
-
- <div class="links">
-
-    <div class="precio">
-    <a href="">Precio</a>
-
-    </div>
-
-    <div class= "ubicacion">
-
-       <a href="/"><p> Ubicacion</p></a>
-
-    </div>
-
-    <div class= "categoria">
-
-       <a href="/"> <p> Categoria / Rubro</p></a>
-       
-    </div>
     
-</div>
+
+    <header>
+
+     <label for="btn-menu" class=icon-menu>
+        <div class="toggle-btn">
+
+            <span>&#9776</span>
+
+        </div>
+        </label>
+
+        <input type="checkbox" id="btn-menu">
+        <div class="cont-menu">
+            <nav>
+            <a href="#">Mis productos</a>
+            <a href="#">Historial</a>
+            <a href="">Perfil</a>
+            </nav>
+            <label for="btn-menu" class=icon-menu>
+                <div class="salir"> 
+                <span>&#x21d0;</span>
+                </div>
+                </label>
+                </div>
+          <section id = "banner">
+            <div class="palabra" >
+                <h1>¡Alquiler por 2 pesos!</h1>
+            </div>
+            <nav>
+                <a href="" class="nav-link">Categoria/Rubro</a>
+                <a href="" class="nav-link">Precio</a>
+                <a href="" class="nav-link">Ubicacion</a>
+            </nav>
+            
+            <div class="lupa">
+            <span>&#127859</span>
+            </div>
+            <div class="caja-buscador">
+            </div>
+            </section>
+            <section id="textos">
+
+
+            
+
+            
+            </section>
+            <input class="buscador" type="text" name="" placeholder="Buscar producto">
+
+
+
+
     
 
 
@@ -400,8 +425,9 @@
     
     </div>
 
-</div>
- </header>
+
+ 
+</header>
 
 </body>
 

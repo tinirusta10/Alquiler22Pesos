@@ -1,7 +1,7 @@
 ﻿<html>
 <head>
     <title>Registrar Usuario</title>
-    @page "/holaa"
+    @page "/clientes"
 @using Alquiler22Pesos.Entidades
     
     
@@ -56,7 +56,7 @@
     width: 450px;
     }
 
-    header .toggle-btn  {
+    header .toggle-btn span  {
 
     position: absolute;
     
@@ -173,13 +173,15 @@
 <body>
     <header>
 
-     <label for="btn-menu" class=icon-menu>
         <div class="toggle-btn">
+            <label for="btn-menu" class=icon-menu>
+        
 
-            <span>&#9776</span>
+                <span>&#9776</span>
 
+        
+            </label>
         </div>
-        </label>
 
         <input type="checkbox" id="btn-menu">
         <div class="cont-menu">
@@ -188,12 +190,14 @@
             <a href="#">Historial</a>
             <a href="">Perfil</a>
             </nav>
+            <div class="salir"> 
             <label for="btn-menu" class=icon-menu>
-                <div class="salir"> 
+                
                 <span>&#x21d0;</span>
-                </div>
+                
                 </label>
-                </div>
+             </div>
+         </div>
           <section id = "banner">
             <div class="palabra" >
                 <h1>¡Alquiler por 2 pesos!</h1>
