@@ -95,7 +95,7 @@ header .toggle-btn  {
 .cont-menu nav  {
 
 
-    transform: translatey(15%);
+    transform: translateY(15%);
 
 
 }
@@ -108,7 +108,7 @@ header .toggle-btn  {
     border-left: 5px solid transparent;
     transition: all 40ms ease;
     color: white;
-    transition: all 2000ms transparent;
+    transition: all 2000ms ease-out;
 }
 
 .cont-menu nav a:hover  {

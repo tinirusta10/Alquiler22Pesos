@@ -1,5 +1,6 @@
-﻿
-
+﻿@using Alquiler22Pesos.Entidades
+@using Alquiler22Pesos.Data
+ 
 @page "/producto"
 <!DOCTYPE html>
 
@@ -191,9 +192,9 @@ header .toggle-btn  {
     color: rgb(2, 2, 2);
 
 }
-nav :hover {
+#banner nav :hover {
 
-    color: black;
+    color: dimgrey;
 
 }
 
@@ -345,7 +346,7 @@ position: absolute;
 
     .nav-link{color:black}
 
-    .nav-link:hover{color:#993366}
+    .nav-link:hover{color:#2b2b2b;}
 
 
 
@@ -425,7 +426,7 @@ position: absolute;
                 <p>Nombre del producto</p>
                 <p>Precio del producto</p>
                 <p>Descripcion del producto</p>
-                <p class="imagen">imagen del producto</p>
+                <p class="imagen">Imagen del producto</p>
 
             </div>
 
@@ -439,7 +440,7 @@ position: absolute;
 
             </div>
             <div class="boton-imagen">
-                <input type="file" id="file">
+                <input type="file" id="file" 
                 <label for="file">
                     Adjuntar
 
@@ -463,8 +464,9 @@ position: absolute;
 </html>
 
 @code   {
+    Productos produ = new Productos();
 
 
 
 
-            }
+       }

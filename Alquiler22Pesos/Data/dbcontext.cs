@@ -1,8 +1,9 @@
 ﻿
-
+using Alquiler22Pesos.Data;
 using Alquiler22Pesos.Entidades;
-using Alquiler2Pesoss.Entidades;
+
 using Microsoft.EntityFrameworkCore;
+
 
 namespace Alquiler22Pesos.Data
 {
@@ -14,7 +15,7 @@ namespace Alquiler22Pesos.Data
 
         public DbSet<Persona> Persona { get; set; }
 
-        public DbSet<Producto> Producto { get; set; }
+        public DbSet<Productos> productos { get; set; }
 
         public DbSet<Provincia> Provincia { get; set; }
 

@@ -154,6 +154,39 @@ namespace Alquiler22Pesos.Migrations
                     b.ToTable("Persona");
                 });
 
+            modelBuilder.Entity("Alquiler22Pesos.Entidades.Productos", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(10)
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("DetallesProducto")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<string>("FotoProducto")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("NombreProducto")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
+
+                    b.Property<float>("PrecioProducto")
+                        .HasMaxLength(20)
+                        .HasColumnType("real");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("productos");
+                });
+
             modelBuilder.Entity("Alquiler22Pesos.Entidades.Provincia", b =>
                 {
                     b.Property<int>("Id")
@@ -184,39 +217,6 @@ namespace Alquiler22Pesos.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TipoDocumento");
-                });
-
-            modelBuilder.Entity("Alquiler2Pesoss.Entidades.Producto", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(10)
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("DetallesProducto")
-                        .IsRequired()
-                        .HasMaxLength(300)
-                        .HasColumnType("nvarchar(300)");
-
-                    b.Property<string>("FotoProducto")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<string>("NombreProducto")
-                        .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
-
-                    b.Property<float>("PrecioProducto")
-                        .HasMaxLength(20)
-                        .HasColumnType("real");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Producto");
                 });
 #pragma warning restore 612, 618
         }

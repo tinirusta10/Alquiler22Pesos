@@ -1,16 +1,10 @@
-﻿using Alquiler22Pesos.Data;
-using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-
-namespace Alquiler2Pesoss.Entidades
+namespace Alquiler22Pesos.Entidades
 {
-
-
-
-
-public class Producto
+    public class Productos
     {
+
         [Required]
         [MaxLength(10)]
         public int Id { get; set; }
@@ -24,7 +18,7 @@ public class Producto
         [Required]
         [MaxLength(20)]
         public float PrecioProducto { get; set; }
-        
+
 
         [Required]
         [MaxLength(300, ErrorMessage = "El numero de caracteres no debe superar los 300 ")]
@@ -32,19 +26,8 @@ public class Producto
 
 
         [Required]
-       [MaxLength(200)]
+        [MaxLength(200)]
         public string FotoProducto { get; set; }
 
-
-
-
-
-       
-
-
     }
-
-
-
-
 }
