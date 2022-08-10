@@ -13,26 +13,26 @@ namespace Alquiler22Pesos.Data
         }
         public async Task<bool> DeleteProduct(int id)
         {
-            var product = await _context.productos.FindAsync(id);
+            var product = await _context.Productos.FindAsync(id);
 
-            _context.productos.Remove(product);
+            _context.Productos.Remove(product);
 
             return await _context.SaveChangesAsync() > 0;
         }
 
         public async Task<IEnumerable<Productos>> GetAllProducts()
         {
-            return await _context.productos.ToListAsync();
+            return await _context.Productos.ToListAsync();
         }
 
         public async Task<Productos> GetProductDetails(int id)
         {
-            return await _context.productos.FindAsync(id);
+            return await _context.Productos.FindAsync(id);
         }
 
         public async Task<bool> InsertProduct(Productos producto)
         {
-            _context.productos.Add(producto);
+            _context.Productos.Add(producto);
 
             return await _context.SaveChangesAsync() > 0;
         }

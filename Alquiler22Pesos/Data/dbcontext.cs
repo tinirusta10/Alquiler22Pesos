@@ -15,7 +15,7 @@ namespace Alquiler22Pesos.Data
 
         public DbSet<Persona> Persona { get; set; }
 
-        public DbSet<Productos> productos { get; set; }
+        public DbSet<Productos> Productos { get; set; }
 
         public DbSet<Provincia> Provincia { get; set; }
 
