@@ -1,22 +1,21 @@
-﻿
-
+﻿using Alquiler22Pesos.Entidades;
 using Alquiler22Pesos.Pages;
 
 namespace Alquiler22Pesos.Data
 {
     public interface IProductService
     {
-        Task<IEnumerable<Producto>> GetAllProducts();
+        Task<IEnumerable<Productos>> GetAllProducts();
 
-        Task<Producto> GetProductDetails(int id);
+        Task<Productos> GetProductDetails(int id);
 
-        Task<bool> InsertProduct(Producto producto);
+        Task<bool> InsertProduct(Productos producto);
 
-        Task<bool> UpdateProduct(Producto producto);
+        Task<bool> UpdateProduct(Productos producto);
 
         Task<bool> DeleteProduct(int id);
 
-        Task<bool> SaveProduct(Producto producto);
+        Task<bool> SaveProduct(Productos producto);
 
     }
 }

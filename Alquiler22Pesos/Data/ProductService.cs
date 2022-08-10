@@ -1,4 +1,4 @@
-﻿using Alquiler22Pesos.Pages;
+﻿using Alquiler22Pesos.Entidades;
 using Microsoft.EntityFrameworkCore;
 
 namespace Alquiler22Pesos.Data
@@ -13,31 +13,31 @@ namespace Alquiler22Pesos.Data
         }
         public async Task<bool> DeleteProduct(int id)
         {
-            var product = await _context.Producto.FindAsync(id);
+            var product = await _context.productos.FindAsync(id);
 
-            _context.Producto.Remove(product);
-
-            return await _context.SaveChangesAsync() > 0;
-        }
-
-        public async Task<IEnumerable<Producto>> GetAllProducts()
-        {
-            return await _context.Producto.ToListAsync();
-        }
-
-        public async Task<Producto> GetProductDetails(int id)
-        {
-            return await _context.Producto.FindAsync(id);
-        }
-
-        public async Task<bool> InsertProduct(Producto producto)
-        {
-            _context.Producto.Add(producto);
+            _context.productos.Remove(product);
 
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public async Task<bool> SaveProduct(Producto producto)
+        public async Task<IEnumerable<Productos>> GetAllProducts()
+        {
+            return await _context.productos.ToListAsync();
+        }
+
+        public async Task<Productos> GetProductDetails(int id)
+        {
+            return await _context.productos.FindAsync(id);
+        }
+
+        public async Task<bool> InsertProduct(Productos producto)
+        {
+            _context.productos.Add(producto);
+
+            return await _context.SaveChangesAsync() > 0;
+        }
+
+        public async Task<bool> SaveProduct(Productos producto)
         {
             if (producto.Id > 0)
             {
@@ -49,7 +49,7 @@ namespace Alquiler22Pesos.Data
             }
         }
 
-        public async Task<bool> UpdateProduct(Producto producto)
+        public async Task<bool> UpdateProduct(Productos producto)
         {
             _context.Entry(producto).State = EntityState.Modified;
 
