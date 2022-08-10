@@ -15,7 +15,7 @@ builder.Services.AddDbContext<dbcontext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("conn"));
 
 });
-
+//h
 builder.Services.AddScoped<IPersonService, PersonService>();//Jose
 builder.Services.AddScoped<IProductService, ProductService>();//Jose
 
