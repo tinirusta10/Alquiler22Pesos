@@ -1,10 +1,10 @@
-﻿@using Alquiler22Pesos.Data
-@page "/producto"
-@page "/producto/{id:int}"
+﻿@page "/eliminarProducto/{id:int}"
 @inject IProductService ProductService
 @inject NavigationManager NavigationManager
- 
 
+
+<h3>EliminarProducto</h3>
+<p style="color:red;text-align:center">Esta seguro que desea eliminar este producto?</p>
 <EditForm Model = "@producto">     
     <html>
 
@@ -454,7 +454,7 @@
                     <label for="submit">
                         Subir Producto
                     </label>
-                    <input type="submit" value="Save" @onclick="SaveProduct"/>
+                    <input type="submit" value="Save" @onclick="DeleteProduct"/>
                     <input type="submit" value="Cancel" @onclick="Cancel"/>
                
                 </div>
@@ -468,7 +468,7 @@
     </html>
 </EditForm>
 
-@code{
+@code {
     [Parameter]
     public int id { get; set; }
 
@@ -476,17 +476,12 @@
 
     protected override async Task OnInitializedAsync()
     {
-        if(id != 0)
-        {
-            producto = await ProductService.GetProductDetails(id);
-        }
+        producto = await ProductService.GetProductDetails(id);
     }
 
-    //Metodo para el Save
-    protected async Task SaveProduct()
+    protected async Task DeleteProduct()
     {
-        await ProductService.SaveProduct(producto);
-
+        await ProductService.DeleteProduct(id);
         NavigationManager.NavigateTo("/");
     }
 

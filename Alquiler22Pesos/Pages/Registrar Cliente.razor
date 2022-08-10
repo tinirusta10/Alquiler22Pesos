@@ -1,8 +1,14 @@
-﻿<html>
+﻿@using Alquiler22Pesos.Data
+@page "/clientes"
+@inject IPersonService PersonService
+
+<EditForm Model = "@persona">
+
+<html>
 <head>
     <title>Registrar Usuario</title>
-    @page "/clientes"
-@using Alquiler22Pesos.Entidades
+    
+
     
     
     <link rel=" icon" href="~/css/" />
@@ -401,12 +407,16 @@ display:flex">
 </body>
 </html>
 
-
-
-
-
+</EditForm>
 
 @code {
-    Persona per = new Persona();
+    Persona persona = new Persona();
+
+    
+    //Metodo para el Save
+    protected async Task SavePerson()
+    {
+        await PersonService.SavePerson(persona);
+    }
 
 }

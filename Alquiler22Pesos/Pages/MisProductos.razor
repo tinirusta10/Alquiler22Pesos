@@ -1,0 +1,57 @@
+﻿@using Alquiler22Pesos.Data
+@page "/misProductos"
+@inject IProductService ProductService
+
+<h3>MisProductos</h3>
+
+@Message
+
+@if(productos == null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Descripción</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var producto in productos)
+            {
+                <tr>
+                    <td>@producto.NombreProducto</td>
+                    <td>@producto.PrecioProducto</td>
+                    <td>@producto.DetallesProducto</td>
+                    <td><a href="/producto/@producto.Id"><i>Editar</i></a></td>
+                    <td><a href="/eliminarProducto/@producto.Id"><i>Eliminar</i></a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    public IEnumerable<Productos> productos { get; set; }
+
+    public string Message { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            productos = await ProductService.GetAllProducts();
+        }
+        catch(Exception e)
+        {
+            Message = e.Message;
+        }      
+    }
+
+}
