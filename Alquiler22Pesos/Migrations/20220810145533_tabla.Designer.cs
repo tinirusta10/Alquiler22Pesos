@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Alquiler22Pesos.Migrations
 {
     [DbContext(typeof(dbcontext))]
-    [Migration("20220810053644_registro")]
-    partial class registro
+    [Migration("20220810145533_tabla")]
+    partial class tabla
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
