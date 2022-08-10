@@ -1,0 +1,175 @@
+﻿@page "/nnn"
+@using Entidades
+
+
+
+
+
+
+
+
+   
+   <EditForm Model="@producto">
+
+ <html>
+
+<head>
+    <title>Registro de Producto</title>
+</head>
+
+<body>
+
+    
+<navbar
+        style="margin: -20px;align-items: center;background: RGB(254, 189, 89);display: flex;justify-content: space-between;">
+        
+        <a style= "font-size: 6rem;">=</a>
+        <p 
+         style="
+         font-size: 2rem;
+         width: 15rem;"> 
+    
+         <b>Alquiler a 2 pesos </b>
+
+        </p>
+        
+    
+    <form 
+        style="width: 29rem;"><input type="search" placeholder="buscar alquiler" style="
+        width: 90%;
+        border-radius: 11px;
+        height: 2rem;
+        font-weight: 600;
+        text-align: center;">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16" style="width: 2rem;">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                </path>
+            </svg>
+    </form>
+
+        <form 
+        style="
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        margin-top: 12px;">
+    
+    <input id="emaildelogin" type="search" placeholder="Email" 
+        style="
+        font-weight: 600;">
+            
+     <input type="password" placeholder="Contraseña" 
+     
+        style="
+        font-weight: 600;">
+        
+    
+    </form>
+</navbar>
+
+    <div 
+        style="
+        display: flex;">
+        
+    <div>
+        <p><a href="https://localhost:7229">pagina principal</a></p>
+        <h2 style="text-align:center;font-size: 37px;">Registrar producto</h2>
+
+
+
+
+      <label for="fname" 
+         style="width: 10rem;">
+         Nombre del producto
+     </label>
+            
+     <input type="text" style=" width: 26rem;"><br><br>
+
+    @* <input type="text" @bind="producto.PrecioProducto" />*@
+      <label for="fname" style=" width: 10rem;">Precio del producto</label>
+            <input type="text" style="
+    width: 26rem;
+"><br><br>
+
+
+
+
+
+
+    <div style="
+    display: flex;
+"><label style="
+    margin-left: -1rem;
+    /* width: 10rem; */
+">Descripcion del producto</label>
+ <p>
+   <textarea name="comentario" rows="7" cols="70" 
+    style="
+    height: 19rem;
+    margin-left: 0rem;">
+    </textarea>
+
+</p>
+         </div>
+     </div>
+        
+     <div 
+    style="
+    margin-left: 2rem;">
+    <label style="margin-top: 6rem;">Imagen del producto </label>
+
+<button onclick="document.getElementById('getFile').click()" style="
+    margin-left: 1rem;
+    background: RGB(254, 189, 89);
+    background-image: -webkit-linear-gradient(top, RGB(254, 189, 89), RGB(254, 189, 89));
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #febd59, #cb9138);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    /* padding: 10px 20px 10px 20px; */
+    text-decoration: none;
+">Adjuntar</button>
+            
+<p style="">
+    <textarea name="comentario" rows="10" cols="100" readonly="readonly" 
+        style="
+        width: 46rem;
+        height: 25rem;">
+    </textarea>
+</p>
+        </div>
+
+
+
+
+
+        <input type="file" id="getFile" name="file" hidden="" accept="">
+        
+    </div>
+</body>
+
+</html>
+
+</EditForm>
+
+        
+
+   
+
+
+
+
+@code{
+    Producto producto = new Producto();
+    
+}
