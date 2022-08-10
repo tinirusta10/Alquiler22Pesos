@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
+    <Folder Include="script de registros\" />
   </ItemGroup>
 
 </Project>
