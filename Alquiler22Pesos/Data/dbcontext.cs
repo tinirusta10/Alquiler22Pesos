@@ -25,9 +25,5 @@ namespace Alquiler22Pesos.Data
 
         public DbSet<Localidad> Localidad { get; set; }
 
-
-
-
-
     }
 }

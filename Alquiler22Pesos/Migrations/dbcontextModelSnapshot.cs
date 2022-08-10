@@ -184,7 +184,7 @@ namespace Alquiler22Pesos.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("productos");
+                    b.ToTable("Productos");
                 });
 
             modelBuilder.Entity("Alquiler22Pesos.Entidades.Provincia", b =>

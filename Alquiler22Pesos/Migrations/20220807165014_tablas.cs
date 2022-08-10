@@ -10,7 +10,7 @@ namespace Alquiler22Pesos.Migrations
         {
 
             migrationBuilder.CreateTable(
-                name: "productos",
+                name: "Productos",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", maxLength: 10, nullable: false)
